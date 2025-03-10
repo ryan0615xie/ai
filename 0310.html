@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>0310</title>
+<meta charset="UTF-8">
+<style>
+  #d1 {
+width:300px;
+height:100px;
+background-color:rgb(255, 0, 140);/*-note =colorcode */
+}
+.grad{
+width:300px;
+height:100px;
+margin:10px 0px;
+border:1px solid black;/*黑框*/
+}
+#d2 {
+background:linear-gradient(green,yellow);/*漸層*/
+}
+#d3{
+background:linear-gradient(90deg,green,rgb(3, 253, 241),rgb(0, 255, 0),rgb(0, 102, 255));
+}
+#d4{
+background:linear-gradient(90deg,red 30%,green 30%,blue 70%);
+}/*色塊*/
+#d5{background:repeating-linear-gradient(45deg,rgb(0, 255, 0) 50%,white 60%);
+}
+#r1{
+background:radial-gradient(green,rgb(0, 255, 0),white);
+}
+#r2{
+background:radial-gradient(circle,green,rgb(0, 255, 0),white);
+}
+#r3{
+background: repeating-linear-gradient(circle,);
+}
+#c1{
+background: conic-gradient(red,green,red);
+}
+#c2{
+background: repeating-conic-gradient(from 60deg,blue,green,red,blue);
+}
+#c3{
+background: repeating-conic-gradient(red,green,red);
+}
+#a1{
+background:repeating-linear-gradient(45deg,rgb(0, 255, 0) 50%,white 60%);
+animation: k1 0.2s linear infinite;
+}
+@keyframes k1 {
+0%{background:repeating-linear-gradient(45deg,rgb(0, 255, 0) 50%,white 60%);
+}
+50%{background:repeating-linear-gradient(45deg,rgb(89, 0, 255) 50%,rgb(0, 0, 0) 60%);
+}
+100%{background:repeating-linear-gradient(45deg,rgb(0, 255, 0) 50%,white 60%);
+}   }
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<div id="d1"></div>
+<div id="d2"class="grad"></div>
+<div id="d3"class="grad"></div>
+<div id="d4"class="grad"></div>
+<div id="d5"class="grad"></div>
+<div id="r1"class="grad"></div>
+<div id="r2"class="grad"></div>
+<div id="r3"class="grad"></div>
+<div id="c1"class="grad"></div>
+<div id="c2"class="grad"></div>
+<div id="c3"class="grad"></div>
+<div id="a1"class="anim"></div>
+
+</body>
+
+
+</html>
