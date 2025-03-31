@@ -1,0 +1,86 @@
+<html>
+<head>
+ <title>0331</title>
+ <meta charset="UTF-8">
+ <style>
+
+
+
+
+
+
+
+ </style>
+ <script>/*java script 註解 可換行*/
+ 
+ 
+ function hello(name,elm){
+    name=prompt("your name")
+   while( name==""){
+    name=prompt("?");}
+   
+    alert(name+"+1000$");
+    elm=document.getElementById("msg");
+    elm.innerHTML="hello"+name;
+}
+function get(id){
+    return document.getElementById(id);
+}
+
+
+
+
+function add(a,b){
+return a+b;
+}
+function calc(){
+elm1=document.getElementById("n1");
+elm2=document.getElementById("n2");
+
+n1=parseInt(elm1.value);
+if(isNaN(n1)) n1=0;
+n2=parseInt(elm2.value);
+if(isNaN(n2)) n2=0;
+elmans.value=add(n1,n2);
+
+
+}
+
+
+ </script>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+ <button onclick="hello('hi',this);">start</button>
+<input type="text" id="n1">+<input type="text" id="n2">
+<button onclick="clac();">=</button>
+<input type="text" id="ans">
+<div id="msg">innerHTML</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
