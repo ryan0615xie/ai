@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>0406</title>
+<meta chartset="UTF-8">
+  <style>
+   #mouseCanvas{
+width:600px;
+height:600px;
+border:1px solid black;
+
+   }
+
+
+  </style>
+  <script>
+   function btnClick1(btn) {
+    alert(btn.innerHTML+"yes");
+ }
+   function btnClick2(btn=null) {
+    btnName=(btn)?(btn.innerHTML):("no");
+    alert(btnName+"yes");
+ }
+  function msMove() {
+mspos=document.getElementById("mousePos");
+
+
+msPos.innerHTML=`(${event.offsetX},${event.offsetY})`;
+console.log("move");  
+}
+  
+
+
+
+  </script>
+</head>
+<body>
+  <button onclick="btnClick2();"></button>
+
+  <button onclick="btnClick2(this);">1</button>
+  <button onclick="btnClick2(this);">2</button>
+<hr>
+<div id="mousePos">(x,y)</div>
+<div id="mouseCanvas" onmousemove="msMove();"></div>
+</body>
+
+
+
+
+
+</html>
