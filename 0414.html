@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>0414</title>
+<style>
+#timer {font-size: 64pt;}
+#lottery{font-size: 64pt;}
+
+
+</style>
+<script>
+function pageinit(){t1=0;}
+function timerstart() {
+  if(t1>0) return;
+    time=0;
+   document.getElementById("timer").innerHTML="00:00";
+  t1=setInterval(function(){
+time++;
+mm=Math.floor(time/60);
+ss=time%60;
+mm=(mm>9)?mm:"0"+mm;
+ss=(ss>9)?ss:"0"+ss;
+document.getElementById("timer").innerHTML=`${mm}:${ss}`; 
+   },1000);
+   
+}
+function timerstop() {
+    (t1)?clearInterval(t1):alert("還沒還沒")
+t1=0;
+}
+
+/////////////////////////////////////////
+
+function lottery() {
+    setTimeout(clearInterval,3000,)
+    setInterval(function() {
+randnum=Math.floor(Math.random()*100);
+document.getElementById("lottery").innerHTML=(randnum>9)?randnum:"0"+randnum;
+},50)
+
+};
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+<div id="timer">00:00</div>
+<button onclick="timerstart();" >計時</button>
+<button onclick="timerstop();">停止</button>
+<hr>
+<div id="bignumber">00</div>
+<button onclick="lottery();">spin</button>
+</body>
+
+
+
+
+
+</html>
