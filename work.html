@@ -5,51 +5,32 @@
     
     
         <style>
-            #game { width: 1000px; 
-                  height: 1000px;
-                  border: 2px black;
+            #game { width: 500px; 
+                  height: 500px;
                   background-color: rgb(0, 0, 0);
-                  position: absolute;
+                  position: relative;
+                 
+
                 }
-           #people {
+          
+           
+                
+                 
+           
+                 #people {
                   width:50px ;
                   height: 20px; 
                   background-color: aqua;
                   position: absolute;
-                  top: 50;
-                  right: 800;
-           
-                }
-                  
-           
-
+                  top: 400;
+                  right: 400;}
 
 
             
 
 
         </style>
-        <script>
-            function gamerule() {
-                role=document.getElementById("role");
-                role.pos={x:0,y:0};
-                
-
-            }
-                 
-            
-            
-        
-            
-
-            
-
-
-
-
-
-        </script>
-
+       
 
 
 
@@ -59,8 +40,54 @@
         <body>
             <div id="game"></div>
             <div id="people"></div>
+            <button onclick="left()">left</button>
+            <button onclick="right()">right</button>
+            <button onclick="up()">up</button>
+            <button onclick="down()">down</button>
 
 
+            <script>
+                let people=document.getElementById("people");
+                let positionx=0;
+                function left(){
+                    positionx +=20;
+                    if (positionx<0) positionx=0
+                    people.style.left=positionx+"px";
+
+
+                }
+    
+                function right(){
+                    positionx -=20;
+                    people.style.right=positionx+"px";
+
+
+                }
+                function up(){
+                    positiony +=20; 
+                    people.style.up=positiony+"px";
+
+
+                }
+                function down(){
+                    positiony -=20; if (positiony<0) positiony=0
+                    people.style.down=positiony+"px";
+
+
+                }
+                     
+                
+                
+            
+                
+    
+                
+    
+    
+    
+    
+    
+            </script>
 
         </body>
 
