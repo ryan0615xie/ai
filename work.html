@@ -22,11 +22,17 @@
                   height: 20px; 
                   background-color: aqua;
                   position: absolute;
-                  top: 400;
-                  right: 400;}
+                  top: 50;
+                  left: 40;}
 
 
-            
+                  #monster{
+                  width:50px ;
+                  height: 20px; 
+                  background-color: rgb(255, 0, 0);
+                  position: absolute;
+                  top:400 ;
+                  left: 400;}
 
 
         </style>
@@ -41,44 +47,30 @@
             <div id="game"></div>
             <div id="people"></div>
             <button onclick="left()">left</button>
-            <button onclick="right()">right</button>
-            <button onclick="up()">up</button>
-            <button onclick="down()">down</button>
-
+         
+            <button onclick="top()">up</button>
+         
+            <div id="monster"></div>
 
             <script>
-                let people=document.getElementById("people");
-                let positionx=0;
+                
+                
                 function left(){
-                    positionx +=20;
-                    if (positionx<0) positionx=0
+                   people=document.getElementById("people"); positionx=people
+                    if (positionx <0)positionx=0;
                     people.style.left=positionx+"px";
-
-
-                }
-    
-                function right(){
-                    positionx -=20;
-                    people.style.right=positionx+"px";
-
+                    
 
                 }
-                function up(){
-                    positiony +=20; 
-                    people.style.up=positiony+"px";
+             
+               
 
-
-                }
-                function down(){
-                    positiony -=20; if (positiony<0) positiony=0
-                    people.style.down=positiony+"px";
-
-
-                }
-                     
                 
-                
-            
+                function top(){
+                 people=document.getElementById("people");  positiony +=20;  
+                    if (positiony>500) positiony=500 
+                    people.style.top=positiony+"px";
+                }
                 
     
                 
